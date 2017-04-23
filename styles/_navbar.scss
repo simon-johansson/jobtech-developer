@@ -1,0 +1,82 @@
+
+.navbar-default {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  padding: 0 0 0 100px;
+  margin-top: -2px;
+
+  @media screen and (max-width: $medium-devices) {
+    padding: 0;
+  }
+
+  .container-fluid {
+    margin-left: -2px !important;
+    margin-right: -2px !important;
+
+    &.dark-bg {
+      background: $black;
+      margin-bottom: 10px;
+    }
+  }
+
+  .navbar-toggle {
+    border: none !important;
+
+    &:hover {
+      background-color: transparent !important;
+    }
+
+    .icon-bar {
+      background-color: $white !important;
+    }
+  }
+
+  .navbar-nav {
+    margin-left: 50px;
+    li {
+      margin-right: 15px;
+      a {
+        background-color: transparent !important;
+        text-transform: uppercase;
+        color: #b1b3b4;
+        font-size: 14px;
+        font-weight: bold;
+        transition: all 0.2s;
+
+        &:hover {
+          background-color: transparent;
+          color: $white;
+        }
+      }
+    }
+    li:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .navbar-brand {
+    @media screen and (max-width: $small-devices) {
+      display: block;
+
+      img {
+        margin: auto;
+        width: 150px;
+      }
+    }
+  }
+
+  .navbar-collapse {
+    border: none !important;
+
+    &.in {
+      .navbar-nav {
+        margin-left: 0;
+      }
+    }
+
+    &.collapsing {
+      -webkit-transition: none;
+      transition: none;
+    }
+  }
+}

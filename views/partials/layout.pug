@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+  head
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+    title Jobtech Developer
+
+    link(rel="shortcut icon" href="favicon.ico?v=2" type="image/x-icon")
+    link(rel="icon" href="favicon.ico?v=2" type="image/x-icon")
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
+    link(rel="stylesheet" type="text/css" href="/styles/styles.css")
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js")
+  body
+    block content
+    include footer.pug
+
+    script.
+        $(function() {
+            FastClick.attach(document.body);
+
+            $('.collapse').on('show.bs.collapse hide.bs.collapse', function(e) {
+                e.preventDefault();
+            });
+            $('[data-toggle="collapse"]').on('click', function(e) {
+                e.preventDefault();
+                $($(this).data('target')).toggleClass('in');
+                $('.navbar-default .container-fluid').toggleClass('dark-bg');
+            });
+        });

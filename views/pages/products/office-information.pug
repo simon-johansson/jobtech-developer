@@ -1,0 +1,30 @@
+extends ../../partials/layout.pug
+include ../../partials/mixins.pug
+
+block content
+  include ../../partials/nav.pug
+
+  header.products
+    h1.page-title Products
+
+  .product-wrapper
+    .breadbrumbs-indent
+      +breadbrumbs('Home', 'Products', 'Office Information')
+    +product-menu(1, 3)
+    .product-content
+      h2 Office Information
+      br
+      p Retrieve contact information and adresses for all employment offices in Sweden.
+
+      .downloadable
+        p
+          a(href="https://www.arbetsformedlingen.se/download/18.362b127c14924e08e87137e/1435736885202/villkor_kontor.pdf") Licence
+          | (PDF in Swedish)
+        a(href="https://www.arbetsformedlingen.se/download/18.362b127c14924e08e87137e/1435736885202/villkor_kontor.pdf" download)
+          .button.download Download
+      .downloadable
+        p
+          a(href="https://www.arbetsformedlingen.se/download/18.362b127c14924e08e871380/1415263361002/tekniskbeskr_kontor.pdf") API
+          | (PDF in Swedish)
+        a(href="https://www.arbetsformedlingen.se/download/18.362b127c14924e08e871380/1415263361002/tekniskbeskr_kontor.pdf" download)
+          .button.download Download

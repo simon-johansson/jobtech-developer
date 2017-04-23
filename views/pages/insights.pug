@@ -1,0 +1,31 @@
+extends ../partials/layout.pug
+include ../partials/mixins.pug
+
+block content
+  include ../partials/nav.pug
+
+  header.insights
+    h1.page-title Insights
+
+  .insights-wrapper
+    +breadbrumbs('Home', 'Insights')
+
+    .insights-content
+      p At Arbetsförmedlingen, we are constantly striving to achieve our users trust and provide them with complete job satisfaction.
+
+      p We looked at students to help take us there and learn from their perspective on how we can prepare ourselves for the challenges in the future labour market.
+
+      p The challenge of <b>‘What if..’</b>
+      br
+
+      .embed-responsive.embed-responsive-16by9
+        iframe(src="https://player.vimeo.com/video/185277519" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="")
+      b.video-title How to become an ‘expert’ organisation
+
+      .embed-responsive.embed-responsive-16by9
+        iframe(src="https://player.vimeo.com/video/185144849" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="")
+      b.video-title Sprinkler
+
+      .embed-responsive.embed-responsive-16by9
+        iframe(src="https://player.vimeo.com/video/185017071" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="")
+      b.video-title Kunskapsförmedlingen

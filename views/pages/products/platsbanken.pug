@@ -1,0 +1,31 @@
+extends ../../partials/layout.pug
+include ../../partials/mixins.pug
+
+block content
+  include ../../partials/nav.pug
+
+  header.products
+    h1.page-title Products
+
+  .product-wrapper
+    .breadbrumbs-indent
+      +breadbrumbs('Home', 'Products', 'Platsbanken')
+    +product-menu(1, 1)
+    .product-content
+      h2 Platsbanken
+      .downloadable
+        p
+          a(href="https://www.arbetsformedlingen.se/download/18.362b127c14924e08e871375/1415263305183/villkor_ledigajobb.pdf") Licence
+          | (PDF in Swedish)
+        a(href="https://www.arbetsformedlingen.se/download/18.362b127c14924e08e871375/1415263305183/villkor_ledigajobb.pdf" download)
+          .button.download Download
+      .downloadable
+        p
+          a(href="https://www.arbetsformedlingen.se/download/18.40fa4e7b159ff029331706ca/1486976282357/teknisk-beskrivning-lediga-jobb.pdf") API
+          | (PDF in Swedish)
+        a(href="https://www.arbetsformedlingen.se/download/18.40fa4e7b159ff029331706ca/1486976282357/teknisk-beskrivning-lediga-jobb.pdf" download)
+          .button.download Download
+
+      .note
+        p NOTE: You can decide which format should be returned with the request header. <br> For JSON, the http request header must contain: “Accept: application/json” or else it will return xml.
+

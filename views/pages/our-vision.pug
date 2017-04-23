@@ -1,0 +1,30 @@
+extends ../partials/layout.pug
+include ../partials/mixins.pug
+
+block content
+  include ../partials/nav.pug
+
+  header.vision
+    h1.page-title Our vision
+
+  .vision-wrapper
+    +breadbrumbs('Home', 'Our vision')
+
+    .vision-content
+      p This site is developed by the Swedish Public Employment Service, Arbetsförmedlingen.
+
+      p For most people, work is an important part of life. We want to, in collaboration with others, create new services that meet the needs of the future labor market.
+
+      p The first step was taken in September 2016. A debate articel in a <a href="https://www.svd.se/af-snart-hittar-du-manga-fler-jobb-hos-oss">Swedish newpaper</a> on the subject, this blog entry from <a href="https://www.forumoppnadata.se/blogg/apier-gor-arbetsformedlingen-till-digitalt-matchningsnav/">Internetstiftelsen</a> is a bit more detailed.
+
+      p Intentions and thoughts about the Ecosystem (In Swedish)
+      br
+
+      .embed-responsive.embed-responsive-16by9
+        iframe.embed-responsive-item(src="https://www.youtube.com/embed/nTld0imEJtA?ecver=2")
+      b.video-title Broader vision about the future labour market (In Swedish)
+
+      .embed-responsive.embed-responsive-16by9
+        iframe.embed-responsive-item(src="https://www.youtube.com/embed/8iYaRdIoXQk?ecver=2")
+      b.video-title Intentions and thoughts about the Ecosystem (In Swedish)
+

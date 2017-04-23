@@ -1,0 +1,30 @@
+extends ../../partials/layout.pug
+include ../../partials/mixins.pug
+
+block content
+  include ../../partials/nav.pug
+
+  header.products
+    h1.page-title Products
+
+  .product-wrapper
+    .breadbrumbs-indent
+      +breadbrumbs('Home', 'Products', 'Occupation Forecast')
+    +product-menu(1, 5)
+    .product-content
+      h2 Occupation Forecasts
+      br
+      p Contains 5 and 10 years forecasts for differens occupations. Forecasts made from in-depth interviews with employers.
+
+      .downloadable
+        p
+          a(href="https://www.arbetsformedlingen.se/download/18.68f3b2e415576fa900eb1966/1468225249925/Licens%2Bf%C3%B6r%2Banv%C3%A4ndning%2Bav%2BArbetsf%C3%B6rmedlingens%2B%C3%B6ppna%2Bdata%2B.pdf") Licence
+          | (PDF in Swedish)
+        a(href="https://www.arbetsformedlingen.se/download/18.68f3b2e415576fa900eb1966/1468225249925/Licens%2Bf%C3%B6r%2Banv%C3%A4ndning%2Bav%2BArbetsf%C3%B6rmedlingens%2B%C3%B6ppna%2Bdata%2B.pdf" download)
+          .button.download Download
+      .downloadable
+        p
+          a(href="https://www.arbetsformedlingen.se/download/18.68f3b2e415576fa900eb1950/1486734258679/teknisk+beskrivning.pdf") API
+          | (PDF in Swedish)
+        a(href="https://www.arbetsformedlingen.se/download/18.68f3b2e415576fa900eb1950/1486734258679/teknisk+beskrivning.pdf" download)
+          .button.download Download

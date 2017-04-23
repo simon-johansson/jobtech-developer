@@ -1,0 +1,42 @@
+extends ../../partials/layout.pug
+include ../../partials/mixins.pug
+
+block content
+  include ../../partials/nav.pug
+
+  header.products
+    h1.page-title Products
+
+  .product-wrapper
+    .breadbrumbs-indent
+      +breadbrumbs('Home', 'Products', 'Open Hack')
+    +product-menu(4)
+    .product-content
+      h2 Open Hack
+      br
+      p
+        b This is an experimental interface use it with caution 🙂
+
+      p Read more about
+        a(href="http://cio.idg.se/2.1782/1.672233/open-hack-coding-humairy-cio-2016")  Open Hack
+
+      p RESTful interface for “Jobbollen” (<a href="http://greatone.se/iris/jobbollen/public/">http://greatone.se/iris/jobbollen/public/</a>). Returns clustered nodes in a three dimensional space, each node represent a job ad from Arbetsförmedlingens Platsbank. The Euclidean distance between nodes represents the “equality”.
+
+      p Usages: <code>http://13.69.251.45:8000/{num nodes}</code>
+      p Use this for test and developement, number of nodes is limited to 10000.
+
+      p Ex. Request <code>http://13.69.251.45:8000/1</code>
+
+      pre [{
+        |   "kluster": 1,
+        |  "koncept": "embedded,matlab,simulink",
+        |   "vektor": [
+        |     -0.7964317799,
+        |     0.9148240089,
+        |     -0.3954355419
+        |   ],
+        |   "rubrik": "embedded design engineers",
+        |   "annonsid": 1212767
+        | }]
+
+      p Here is the complete dataset for “Jobbollen”: <a href="http://greatone.se/iris/jobbollen/public/annonser.json">http://greatone.se/iris/jobbollen/public/annonser.json</a>

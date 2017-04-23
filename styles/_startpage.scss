@@ -1,0 +1,93 @@
+
+.section-header,
+.section-description {
+  color: $almost-black;
+}
+
+.our-products,
+.our-vision,
+.sharing-insights {
+  margin: 80px 0 80px;
+
+  @media screen and (max-width: $medium-devices) {
+    margin-top: 60px;
+  }
+
+  .view-videos {
+    margin-top: 35px;
+    display: block;
+    width: 120px;
+  }
+
+  .view-products {
+    margin-top: 15px;
+    display: block;
+    width: 170px;
+  }
+}
+
+.our-vision {
+  background: $white;
+  @media screen and (max-width: $medium-devices) {
+    padding: 20px 15px;
+  }
+
+  .section-header,
+  .section-description {
+    @media screen and (max-width: $medium-devices) {
+      text-align: center;
+      max-width: 720px;
+      display: block;
+      margin: auto;
+    }
+  }
+  .section-header {
+    @media screen and (max-width: $medium-devices) {
+      margin-top: 60px;
+    }
+  }
+  .read-more {
+    margin-top: 35px;
+    display: block;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.4px;
+    color: $blue;
+    @media screen and (max-width: $medium-devices) {
+      text-align: center;
+    }
+  }
+}
+
+.jumbotron {
+  margin-top: -70px;
+  margin-bottom: 0px;
+  height: 430px;
+  background-image: url(#{$img-path}startpage-header-bg.jpg);
+  background-size: 100%;
+  padding-top: 150px;
+  @media screen and (max-width: $small-devices) {
+    height: 300px;
+    padding-top: 100px;
+    background-size: 150%;
+  }
+  // background-position: left top;
+
+  .tagline, .subtitle {
+    text-align: center;
+    color: white;
+  }
+
+  .tagline {
+    font-size: 60px;
+    font-weight: 300;
+    @media screen and (max-width: $small-devices) {
+      font-size: 45px;
+    }
+  }
+
+  .subtitle {
+    font-size: 19px;
+  }
+}

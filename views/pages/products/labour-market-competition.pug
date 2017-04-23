@@ -1,0 +1,30 @@
+extends ../../partials/layout.pug
+include ../../partials/mixins.pug
+
+block content
+  include ../../partials/nav.pug
+
+  header.products
+    h1.page-title Products
+
+  .product-wrapper
+    .breadbrumbs-indent
+      +breadbrumbs('Home', 'Products', 'Labour market competition')
+    +product-menu(5)
+    .product-content
+      h2 Labour market competition
+      br
+
+      p <b>Win SEK 2 million and be part of developing a labour market for all</b>
+
+      p Submit a digital solution that makes it easier to employ or to find a job that matches people´s different capacity for work. Or develop an innovative idea or solution that will make workplaces more accessible to everyone, or will help employers to see competence and opportunities instead of barriers.
+
+      p Every winner in the innovation competition will receive expert support and financing up to a total of SEK 2 million. The competition is a collaboration between PTS and Arbetsförmedlingen.
+
+      p Find out more <a href="http://www.pts.se/innovation14en">http://www.pts.se/innovation14en</a>  or <a href="http://www.pts.se/innovation14">http://www.pts.se/innovation14</a>
+
+      br
+
+      img.img-responsive(src="/images/bild_eng_221x221.png")
+
+

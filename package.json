@@ -1,0 +1,38 @@
+{
+  "name": "jobtech",
+  "version": "1.0.0",
+  "description": "This site is a collection of all APIs, free of usage, from the Swedish Public Employment Service, Arbetsförmedlingen.",
+  "main": "index.js",
+  "watch": {
+    "compile-scss": {
+      "patterns": ["styles"],
+      "extensions": "scss"
+    },
+    "compile-pug": {
+      "patterns": ["views"],
+      "extensions": "pug"
+    },
+    "copy-images": {
+      "patterns": ["images"],
+      "extensions": "png,jpg"
+    }
+  },
+  "scripts": {
+    "compile-scss": "node-sass --output-style compressed -o dist/styles styles",
+    "compile-pug": "pug --output-style compressed -o dist/ views/pages",
+    "copy-images": "copyfiles './images/**' dist && copyfiles favicon.ico dist",
+    "reload": "browser-sync start --server 'dist' --files 'dist/**' --extensions 'html'",
+    "watch": "npm-watch",
+    "compile": "rimraf dist/ && npm run compile-pug && npm run compile-scss && npm run copy-images"
+  },
+  "author": "Simon Johansson <simon.johansson@screeninteraction.com>",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.18.8",
+    "copyfiles": "^1.2.0",
+    "node-sass": "^4.5.2",
+    "npm-watch": "^0.1.8",
+    "pug-cli": "^1.0.0-alpha6",
+    "rimraf": "^2.6.1"
+  }
+}

@@ -1,0 +1,75 @@
+mixin puff(img, title, description)
+  .puff
+    img(src="/images/" + img)
+    .puff-text
+      p.puff-title= title
+      p.puff-description= description
+
+mixin pages(page, submenu)
+  -
+    var pages = {
+      'Home': '/',
+      'Our vision': '/our-vision',
+      'Insights': '/insights',
+      'News': '/news',
+      'Products': '/products',
+      'Platsbanken': '/products/platsbanken',
+      'Occupation': '/products/occupations',
+      'Office Information': '/products/office-information',
+      'Historical Job Postings': '/products/historical-job-postings',
+      'Occupation Forecast': '/products/occupation-forecasts',
+      'CV with MS Word': '/products/cv-with-ms-word',
+      'Open Hack': '/products/open-hack',
+      'Labour market competition': '/products/labour-market-competition',
+    }
+  a(href=pages[page])= submenu ? '> ' + page : page
+
+mixin product-menu(top, sub)
+  .product-menu
+    ul
+      li(class= top === 1 ? 'active' : '')
+        a(href="/products") API
+      ul.sublist
+        li(class= sub === 1 ? 'active' : '')
+          +pages('Platsbanken', true)
+        li(class= sub === 2 ? 'active' : '')
+          +pages('Occupation', true)
+        li(class= sub === 3 ? 'active' : '')
+          +pages('Office Information', true)
+        li(class= sub === 4 ? 'active' : '')
+          +pages('Historical Job Postings', true)
+        li(class= sub === 5 ? 'active' : '')
+          +pages('Occupation Forecast', true)
+      li(class= top === 2 ? 'active' : '')
+        a(href="http://historik.azurewebsites.net/" target="_blank") Historical Data Analysis
+      li(class= top === 3 ? 'active' : '')
+        +pages('CV with MS Word')
+      li(class= top === 4 ? 'active' : '')
+        +pages('Open Hack')
+      li(class= top === 5 ? 'active' : '')
+        +pages('Labour market competition')
+
+mixin breadbrumbs(...items)
+  ol.breadcrumb
+    each item, index in items
+      unless index === (items.length - 1)
+        -
+          var pages = {
+            'Home': '/',
+            'Our vision': '/our-vision',
+            'Insights': '/insights',
+            'News': '/news',
+            'Products': '/products',
+            'Platsbanken': '/products/platsbanken',
+            'Occupation': '/products/occupations',
+            'Office Information': '/products/office-information',
+            'Historical Job Postings': '/products/historical-job-postings',
+            'Occupation Forecast': '/products/occupation-forecasts',
+            'CV with MS Word': '/products/cv-with-ms-word',
+            'Open Hack': '/products/open-hack',
+            'Labour market competition': '/products/labour-market-competition',
+          }
+        li
+          a(href=pages[item])= item
+      else
+        li.active= item

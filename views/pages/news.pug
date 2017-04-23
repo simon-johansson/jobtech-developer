@@ -1,0 +1,15 @@
+extends ../partials/layout.pug
+include ../partials/mixins.pug
+
+block content
+  include ../partials/nav.pug
+
+  header.news
+    h1.page-title News
+
+  .news-wrapper
+    +breadbrumbs('Home', 'News')
+
+    .news-content
+      a.twitter-timeline(data-width="600" href="https://twitter.com/PressAf") Tweets by PressAf
+      script(async src="//platform.twitter.com/widgets.js" charset="utf-8")

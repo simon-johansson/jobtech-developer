@@ -1,0 +1,120 @@
+extends ../../partials/layout.pug
+include ../../partials/mixins.pug
+
+block content
+  include ../../partials/nav.pug
+
+  header.products
+    h1.page-title Products
+
+  .product-wrapper
+    .breadbrumbs-indent
+      +breadbrumbs('Home', 'Products', 'Historical Job Postings')
+    +product-menu(1, 4)
+    .product-content
+      h2 Historical Job Postings
+
+      br
+
+      .container-fluid
+        .row
+          .col-lg-9
+            <b>Description</b>
+            p This dataset consists of 4.2M job postings published on Platsbanken from the year 2006 up to and including 2016. Texts have been anonymized with sentences including names, telephone numbers and email adresses removed. Each listing contains metadata on location, dates, employer name, job type and job details.
+
+            p For a visual overview of this dataset, please see the <a href="http://historik.azurewebsites.net/" target="_blank">dashboard example</a>.
+
+            <b>API with basic statistics</b>
+            p We provide a microservice for basic statistics and queries on the dataset. A notebook with examples can be found <a href="#">here</a> (under construction).
+
+            <b>Examples</b>
+            p <a href="http://historik.azurewebsites.net/">Dashboard</a> – Visualize and explore the dataset. Uses the above API. (Source code on GitHub, under construction)
+
+            <b>Data format</b>
+            p Each line in a file contains a job listing in a JSON format (<a href="http://jsonlines.org/">JSON Lines</a>):
+
+            pre
+              | ...
+              | {"ANTAL_AKT_PLATSER": "3", "PLATSBESKRIVNING": "...", ... }
+              | {"ANTAL_AKT_PLATSER": "1", "PLATSBESKRIVNING": "...", ... }
+              | {"ANTAL_AKT_PLATSER": "1", "PLATSBESKRIVNING": "...", ... }
+              | ...
+
+            p A listing has the following fields:
+
+            .table-responsive
+              table.table.table-bordered
+                thead
+                  tr
+                    th Field
+                    th Description
+                tbody
+                  tr
+                    td ANTAL_AKT_PLATSER
+                    td
+                  tr
+                    td PLATSBESKRIVNING
+                    td Ad text
+                  tr
+                    td ADRESSLAND
+                    td Country (Sweden if not specified)
+                  tr
+                    td AG_NAMN
+                    td Employer name
+                  tr
+                    td ARBETSDRIFT
+                    td
+                  tr
+                    td ARBETSTID
+                    td
+                  tr
+                    td BESKR_ARBETSDRIFT
+                    td
+                  tr
+                    td FORSTA_PUBLICERINGSDATUM
+                    td Publication date
+                  tr
+                    td KOMMUN_KOD
+                    td Municipality code
+                  tr
+                    td PLATSNUMMER
+                    td
+                  tr
+                    td PLATSRUBRIK
+                    td
+                  tr
+                    td POSTORT
+                    td
+                  tr
+                    td SISTA_ANSOK_PUBLDATUM
+                    td
+                  tr
+                    td TILLTRADE
+                    td
+                  tr
+                    td VARAKTIGHET
+                    td
+                  tr
+                    td YRKE_ID
+                    td SSYK occupation id
+
+            p All fields are strings and may be nullable, i.e. no data may be given for a field.
+
+          .col-lg-3
+            p <b>Download</b>
+              p <a href="https://simonbe.blob.core.windows.net/afhistorik/pb2006_2016.zip">All Years</a> (2.36 GB)
+              p <a href="https://simonbe.blob.core.windows.net/afhistorik/2006.zip">2006</a> (84MB)
+              p <a href="https://simonbe.blob.core.windows.net/afhistorik/2007.zip">2007</a> (120MB)
+              p <a href="https://simonbe.blob.core.windows.net/afhistorik/2008.zip">2008</a> (124MB)
+              p <a href="https://simonbe.blob.core.windows.net/afhistorik/2009.zip">2009</a> (90MB)
+              p <a href="https://simonbe.blob.core.windows.net/afhistorik/2010.zip">2010</a> (139MB)
+              p <a href="https://simonbe.blob.core.windows.net/afhistorik/2011.zip">2011</a> (192MB)
+              p <a href="https://simonbe.blob.core.windows.net/afhistorik/2012.zip">2012</a> (201MB)
+              p <a href="https://simonbe.blob.core.windows.net/afhistorik/2013.zip">2013</a> (213MB)
+              p <a href="https://simonbe.blob.core.windows.net/afhistorik/2014.zip">2014</a> (292MB)
+              p <a href="https://simonbe.blob.core.windows.net/afhistorik/2015.zip">2015</a> (428MB)
+              p <a href="https://simonbe.blob.core.windows.net/afhistorik/2016.zip">2016</a> (541MB)
+
+            p <b>License</b>
+              p <a href="https://creativecommons.org/licenses/by/4.0/">CC by 4.0</a>
+

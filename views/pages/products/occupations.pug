@@ -1,0 +1,25 @@
+extends ../../partials/layout.pug
+include ../../partials/mixins.pug
+
+block content
+  include ../../partials/nav.pug
+
+  header.products
+    h1.page-title Products
+
+  .product-wrapper
+    .breadbrumbs-indent
+      +breadbrumbs('Home', 'Products', 'Occupation')
+    +product-menu(1, 2)
+    .product-content
+      h2 Occupation
+      .downloadable
+        p
+          a(href="https://www.arbetsformedlingen.se/download/18.1974235114fa922d37751b2/1441803774120/Licens+f%C3%B6r+anv%C3%A4ndning+av+Arbetsf%C3%B6rmedlingens+%C3%B6ppna+data.pdf") Licence
+          | (PDF in Swedish)
+        a(href="https://www.arbetsformedlingen.se/download/18.1974235114fa922d37751b2/1441803774120/Licens+f%C3%B6r+anv%C3%A4ndning+av+Arbetsf%C3%B6rmedlingens+%C3%B6ppna+data.pdf" download)
+          .button.download Download
+      .downloadable
+        p
+          a(href="http://api.arbetsformedlingen.se/af/v0/Occupation/wsoccupation.asmx") WSDL description
+
