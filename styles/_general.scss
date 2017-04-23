@@ -50,7 +50,12 @@ h2 {
 
 
 .puffs {
-    margin-top: 50px;
+    max-width: 1360px;
+    margin: 50px auto 0;
+
+    @media screen and (max-width: $medium-devices) {
+      max-width: 730px;
+    }
 
   .puff {
     width: 100%;

@@ -36,8 +36,9 @@ header {
 }
 
 .product-wrapper {
-  // min-height: 500px;
+  max-width: 1360px;
   min-width: 1000px;
+  margin: auto;
 
   &::after {
     content: " ";
