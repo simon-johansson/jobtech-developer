@@ -1,4 +1,26 @@
 
+.work-in-progress {
+  background-color: #0967b2;
+  // line-height: 62px;
+  text-align: center;
+  padding: 15px 20px;
+
+  p {
+    font-size: 18px;
+    color: $white;
+    margin: 0;
+
+    @media screen and (max-width: $medium-devices) {
+      font-size: 14px;
+    }
+
+    a {
+      color: $white !important;
+      font-weight: bold;
+    }
+  }
+}
+
 .section-header,
 .section-description {
   color: $almost-black;
@@ -7,10 +29,10 @@
 .our-products,
 .our-vision,
 .sharing-insights {
-  margin: 80px 0 80px;
+  margin: 40px 0 80px;
 
   @media screen and (max-width: $medium-devices) {
-    margin-top: 60px;
+    margin-top: 0px;
   }
 
   .view-videos {
@@ -61,7 +83,7 @@
 }
 
 .jumbotron {
-  margin-top: -70px;
+  margin-top: -85px;
   margin-bottom: 0px;
   height: 430px;
   background-image: url(#{$img-path}startpage-header-bg.jpg);

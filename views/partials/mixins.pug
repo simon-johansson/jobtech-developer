@@ -1,26 +1,27 @@
-mixin puff(img, title, description)
+mixin puff(img, title, description, type)
   .puff
     img(src="/images/" + img)
     .puff-text
       p.puff-title= title
       p.puff-description= description
+      p.puff-type= type
 
 mixin pages(page, submenu)
   -
     var pages = {
       'Home': '/',
-      'Our vision': '/our-vision',
+      'Vision': '/vision',
       'Insights': '/insights',
       'News': '/news',
-      'Products': '/products',
-      'Platsbanken': '/products/platsbanken',
-      'Occupation': '/products/occupations',
-      'Office Information': '/products/office-information',
-      'Historical Job Postings': '/products/historical-job-postings',
-      'Occupation Forecast': '/products/occupation-forecasts',
-      'CV with MS Word': '/products/cv-with-ms-word',
-      'Open Hack': '/products/open-hack',
-      'Labour market competition': '/products/labour-market-competition',
+      'Assets': '/assets',
+      'Platsbanken': '/assets/platsbanken',
+      'Occupation': '/assets/occupations',
+      'Office Information': '/assets/office-information',
+      'Historical Job Postings': '/assets/historical-job-postings',
+      'Occupation Forecast': '/assets/occupation-forecasts',
+      // 'CV with MS Word': '/assets/cv-with-ms-word',
+      // 'Open Hack': '/assets/open-hack',
+      'Labour market competition': '/assets/labour-market-competition',
     }
   a(href=pages[page])= submenu ? '> ' + page : page
 
@@ -28,7 +29,7 @@ mixin product-menu(top, sub)
   .product-menu
     ul
       li(class= top === 1 ? 'active' : '')
-        a(href="/products") API
+        a(href="/assets") Assets
       ul.sublist
         li(class= sub === 1 ? 'active' : '')
           +pages('Platsbanken', true)
@@ -40,13 +41,13 @@ mixin product-menu(top, sub)
           +pages('Historical Job Postings', true)
         li(class= sub === 5 ? 'active' : '')
           +pages('Occupation Forecast', true)
-      li(class= top === 2 ? 'active' : '')
+      //- li(class= top === 2 ? 'active' : '')
         a(href="http://historik.azurewebsites.net/" target="_blank") Historical Data Analysis
-      li(class= top === 3 ? 'active' : '')
+      //- li(class= top === 3 ? 'active' : '')
         +pages('CV with MS Word')
-      li(class= top === 4 ? 'active' : '')
+      //- li(class= top === 4 ? 'active' : '')
         +pages('Open Hack')
-      li(class= top === 5 ? 'active' : '')
+      //- li(class= top === 5 ? 'active' : '')
         +pages('Labour market competition')
 
 mixin breadbrumbs(...items)
@@ -56,18 +57,18 @@ mixin breadbrumbs(...items)
         -
           var pages = {
             'Home': '/',
-            'Our vision': '/our-vision',
+            'Our vision': '/vision',
             'Insights': '/insights',
             'News': '/news',
-            'Products': '/products',
-            'Platsbanken': '/products/platsbanken',
-            'Occupation': '/products/occupations',
-            'Office Information': '/products/office-information',
-            'Historical Job Postings': '/products/historical-job-postings',
-            'Occupation Forecast': '/products/occupation-forecasts',
-            'CV with MS Word': '/products/cv-with-ms-word',
-            'Open Hack': '/products/open-hack',
-            'Labour market competition': '/products/labour-market-competition',
+            'Assets': '/assets',
+            'Platsbanken': '/assets/platsbanken',
+            'Occupation': '/assets/occupations',
+            'Office Information': '/assets/office-information',
+            'Historical Job Postings': '/assets/historical-job-postings',
+            'Occupation Forecast': '/assets/occupation-forecasts',
+            // 'CV with MS Word': '/assets/cv-with-ms-word',
+            // 'Open Hack': '/assets/open-hack',
+            'Labour market competition': '/assets/labour-market-competition',
           }
         li
           a(href=pages[item])= item

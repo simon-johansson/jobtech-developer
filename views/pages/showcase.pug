@@ -1,0 +1,18 @@
+extends ../partials/layout.pug
+include ../partials/mixins.pug
+
+block content
+  include ../partials/nav.pug
+
+  header.showcase
+    h1.page-title Showcase
+
+  .container-fluid.our-products
+    //- +breadbrumbs('Home', 'Products')
+    p.showcase-description.text-center Latest applications that have been built with our APIs, SDKs, and other developer tools.
+    p.showcase-description.text-center Built an application using our assets? <a href="#">Email us</a> and tell us about it!
+
+    .row.puffs
+      .col-sm-6.col-md-4.col-lg-3
+        a(href="http://historik.azurewebsites.net" target="_blank")
+          +puff('history-analysis-puff.jpg', 'Historical Data Analysis', 'Make smarter decisions with past data on job trends in various industry sectors', 'APPLICATION')

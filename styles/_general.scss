@@ -6,6 +6,7 @@ html, body {
 body {
   font-family: $default-font;
   background-color: $almost-white;
+  overflow-x: hidden;
 }
 
 h2 {
@@ -83,7 +84,7 @@ h2 {
       position: absolute;
       bottom: 0;
       background: $white;
-      height: 130px;
+      height: 140px;
       padding: 20px;
 
       .puff-title {
@@ -95,6 +96,12 @@ h2 {
       .puff-description {
         color: $gray;
         font-size: 14px;
+      }
+      .puff-type {
+        color: #4a90e2;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 0.3px;
       }
     }
   }

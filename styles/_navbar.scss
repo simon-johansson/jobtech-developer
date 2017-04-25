@@ -32,7 +32,9 @@
   }
 
   .navbar-nav {
+    margin-top: 15px;
     margin-left: 50px;
+    line-height: 60px;
     li {
       margin-right: 15px;
       a {
@@ -60,8 +62,11 @@
 
       img {
         margin: auto;
-        width: 150px;
+        height: 25px !important;
       }
+    }
+    img {
+      height: 40px;
     }
   }
 

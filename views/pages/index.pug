@@ -6,50 +6,55 @@ block content
 
   .jumbotron
     .container
-      h1.tagline Power of Data
-      p.subtitle Powerful APIs, SDKs and widgets for your applications
+      h1.tagline Jobtech Developer
+      p.subtitle Powerful APIs, widgets and datasets for you to develop the missing app
+
+  .container-fluid.work-in-progress
+    .row
+      .col-lg-12
+        p This website is a work in progress. We invite you to explore JobTech and give us your valuable feedback. <a href="#">Email us</a>
+
 
   .container-fluid.our-products
-    .row
-      .col-sm-12
-        h2.section-header.text-center Explore our products
-        p.section-description.text-center A collection of open APIs from the Swedish Public Employment Service, Arbetsförmedlingen
+    //- .row
+    //-   .col-sm-12
+    //-     h2.section-header.text-center Explore our products
+    //-     p.section-description.text-center A collection of open APIs from the Swedish Public Employment Service, Arbetsförmedlingen
     .row.puffs
       .col-sm-6.col-md-4.col-lg-3
-        a(href="/products/platsbanken")
-          +puff('api-puff.jpg', 'Platsbanken', 'All the current job postings available on Platsbanken')
+        a(href="/assets/platsbanken")
+          +puff('api-puff.jpg', 'Platsbanken', 'All the current job postings available on Platsbanken', 'API')
       .col-sm-6.col-md-4.col-lg-3
-        a(href="/products/historical-job-postings")
-          +puff('data-analysis-puff.jpg', 'Historical Job Postings', 'All job postings from Platsbanken 2006-2016')
+        a(href="/assets/historical-job-postings")
+          +puff('data-analysis-puff.jpg', 'Historical Job Postings', 'All job postings from Platsbanken 2006-2016', 'DATASETS')
       .col-sm-6.col-md-4.col-lg-3
-        a(href="/products/cv-with-ms-word")
-          +puff('cv-puff.jpg', 'CV with MS Word', 'A plugin that suggests appropriate job vacancies based on text analysis')
+        a(href="/assets/occupations")
+          +puff('occupation-puff.jpg', 'Occupation', 'Occupational description of 450 different occupations, with forecasts', 'API')
       .col-sm-6.col-md-4.col-lg-3.hidden-md
-        a(href="/products/occupation-forecasts")
-          +puff('dev-services-puff.jpg', 'Occupation Forecasts', 'Short and long-term forecasts of labour demand for different occupations')
+        a(href="/assets/occupation-forecasts")
+          +puff('dev-services-puff.jpg', 'Occupation Forecasts', 'Short and long-term forecasts of labour demand for different occupations', 'API')
 
-    a(href="/products").button.view-products View all products
+    a(href="/assets").button.view-products View all assets
 
   .container-fluid.our-vision
     .row
       .col-md-6
         .box
-          .embed-responsive.embed-responsive-16by9
-            iframe.embed-responsive-item(src="https://www.youtube.com/embed/nTld0imEJtA?ecver=2?wmode=opaque&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;wmode=transparent")
+          img.img-responsive(src="/images/vision-startpage.jpg")
       .col-md-6.col-lg-4
         .box.vertical-align
           div.center-when-mobile
             h2.section-header Our vision
-            p.section-description For most people, work is an important part of life. We want to, in collaboration with others, create new services that meet the needs of the future labor market.
-            a(href="/our-vision")
+            p.section-description JobTech Developer aims to provide powerful assets and support to developers and changemakers, who share our vision of finding solutions to the challenges and needs of the future labor market in Sweden.
+            a(href="/vision")
               span.read-more Read more
 
-  .container-fluid.sharing-insights
-    .row
-      .col-md-6.col-md-offset-3
-        h2.section-header.text-center Sharing insights
-        p.section-description.text-center We believe that inspiration can come in all different forms and from anywhere. So we’ve put together our learnings and insights that will hopefully help you in your journey.
-        a(href="/insights").button.view-videos View videos
+  //- .container-fluid.sharing-insights
+  //-   .row
+  //-     .col-md-6.col-md-offset-3
+  //-       h2.section-header.text-center Sharing insights
+  //-       p.section-description.text-center We believe that inspiration can come in all different forms and from anywhere. So we’ve put together our learnings and insights that will hopefully help you in your journey.
+  //-       a(href="/insights").button.view-videos View videos
 
   script.
     $('.box').matchHeight();
